@@ -3,6 +3,7 @@ name = "python-template"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
+# enable = false   ← remove or comment this unless it's meaningful
 
 
 [tool.poetry.dependencies]
@@ -13,6 +14,7 @@ openai = "^1.3.0"  # Latest stable version
 requests = "^2.32.3"  # Latest stable version
 typing-extensions = "^4.12.2"
 idna = "^3.8"
+gunicorn = "^23.0.0"
 
 [tool.pyright]
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
@@ -31,9 +33,6 @@ entrypoint = "main.py"
 
 [interpreter]
 command = ["python3", "main.py"]
-
-[tool.poetry]
-enable = false
 
 [[ports]]
 localPort = 8080
